@@ -1,16 +1,28 @@
 # MySimpleFarm
 
-MySimpleFarm is a web application for managing farm operations.
+## About the project
+
+MySimpleFarm is a farm management application for organizing and tracking agricultural operations in one place.
+
+The application allows users to manage farms, fields, crops and growing seasons, connect crops with specific fields and seasons, plan and track tasks, and record harvests, harvest entries and losses.
+
+The project focuses on connecting these entities into a consistent workflow — from planning a growing season and assigning crops to fields to completing tasks and recording the final harvest.
 
 ## Features
 
-- Farm management
-- Field management
+- Farm and field management
 - Crop and season management
-- Task planning
-- Harvest management
+- Field–crop–season assignments
+- Task and combined task management
+- Harvest planning and tracking
+- Harvest entries with quantity and quality
+- Harvest loss tracking
 - User authentication
 - Roles and permissions
+- Form Request validation
+- Service-based business logic
+- Enum-based status management
+- Protected web routes
 
 ## Technologies
 
