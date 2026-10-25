@@ -4,7 +4,7 @@ import {
     BookOpen,
     Building2,
     CalendarRange,
-    CheckSquare,
+   // CheckSquare,
     ClipboardList,
     FileText,
     FolderGit2,
@@ -13,6 +13,7 @@ import {
     LayoutGrid,
     Link2,
     Map,
+    MapPinned,
     Sprout,
     SquareCheckBig,
     Users,
@@ -54,6 +55,16 @@ const mainNavItems: NavItem[] = [
         title: 'Betriebe',
         href: '/farms',
         icon: Building2,
+    },
+    {
+        title: 'Regionen',
+        href: '/regions',
+        icon: MapPinned,
+    },
+        {
+        title: 'Regionen und Kulturen',
+        href: '/region-crops',
+        icon: MapPinned,
     },
     {
         title: 'Felder',
