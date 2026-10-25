@@ -6,7 +6,6 @@ import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem } from '@/types';
 
 type RegionEditPageProps = {
-    statuses: string[];
     region: {
         id: number;
         name: string;

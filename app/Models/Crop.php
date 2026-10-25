@@ -35,4 +35,9 @@ class Crop extends Model
     {
         return $this->hasMany(FieldCropAssignment::class);
     }
+
+    public function regions()
+    {
+        return $this->belongsToMany(Region::class, 'region_crops')->withTimestamps();
+    }
 }

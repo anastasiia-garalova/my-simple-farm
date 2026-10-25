@@ -61,6 +61,11 @@ const mainNavItems: NavItem[] = [
         href: '/regions',
         icon: MapPinned,
     },
+        {
+        title: 'Regionen und Kulturen',
+        href: '/region-crops',
+        icon: MapPinned,
+    },
     {
         title: 'Felder',
         href: '/fields',

@@ -15,8 +15,11 @@ use App\Http\Controllers\TaskTypeController;
 use App\Http\Controllers\Teaching\PermissionDemoController;
 use App\Http\Controllers\WorkItemController;
 use App\Http\Controllers\RegionController;
+use App\Http\Controllers\RegionCropController;
+
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
+
 
 
 
@@ -63,7 +66,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('farms.update');
 
 
- Route::get('regions', [RegionController::class, 'index'])
+    Route::get('regions', [RegionController::class, 'index'])
         ->name('regions.index');
 
     Route::get('regions/create', [RegionController::class, 'create'])
@@ -77,6 +80,22 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::patch('regions/{region}', [RegionController::class, 'update'])
         ->name('regions.update');
+
+    
+    Route::get('region-crops', [RegionCropController::class, 'index'])
+        ->name('region-crops.index');
+
+    Route::get('region-crops/create', [RegionCropController::class, 'create'])
+        ->name('region-crops.create');
+
+    Route::post('region-crops', [RegionCropController::class, 'store'])
+        ->name('region-crops.store');
+
+    Route::get('region-crops/{regionCrop}/edit', [RegionCropController::class, 'edit'])
+        ->name('region-crops.edit');
+
+    Route::patch('region-crops/{regionCrop}', [RegionCropController::class, 'update'])
+        ->name('region-crops.update');
 
 
 

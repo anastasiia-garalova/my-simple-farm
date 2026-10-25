@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class RegionController extends Controller
 {
-        public function __construct(
+    public function __construct(
         protected RegionService $regionService
     ) {
     }
