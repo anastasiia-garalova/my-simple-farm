@@ -10,19 +10,19 @@ class SeasonPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasRole('admin') || $user->can('manage fields');
+        return $user->hasRole('admin') || $user->can('manage seasons');
     }
 
     public function view(User $user, Season $season): bool
     {
         return $user->hasRole('admin')
-            || $user->can('manage fields')
+            || $user->can('manage seasons')
             || $season->created_by === $user->id;
     }
 
     public function create(User $user): bool
     {
-        return $user->hasRole('admin') || $user->can('manage fields');
+        return $user->hasRole('admin') || $user->can('manage seasons');
     }
 
     public function update(User $user, Season $season): bool
@@ -35,6 +35,6 @@ class SeasonPolicy
             return false;
         }
 
-        return $user->can('manage fields');
+        return $user->can('manage seasons');
     }
 }

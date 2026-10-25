@@ -8,7 +8,6 @@ import type { BreadcrumbItem } from '@/types';
 type CropEntry = {
     id: number;
     name: string;
-    category: string;
     status: string;
     notes: string | null;
     created_at: string | null;
@@ -66,7 +65,6 @@ export default function CropsIndexPage() {
                                         <div className="space-y-3">
                                             <div className="flex flex-wrap items-center gap-2">
                                                 <h3 className="font-semibold">{crop.name}</h3>
-                                                <Badge variant="outline">{crop.category}</Badge>
                                                 <Badge variant="outline">{crop.status}</Badge>
                                             </div>
                                             <p className="max-w-3xl text-sm text-muted-foreground">{crop.notes || 'Keine Notizen hinterlegt.'}</p>

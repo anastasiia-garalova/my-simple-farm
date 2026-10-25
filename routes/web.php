@@ -14,8 +14,11 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TaskTypeController;
 use App\Http\Controllers\Teaching\PermissionDemoController;
 use App\Http\Controllers\WorkItemController;
+use App\Http\Controllers\RegionController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
+
+
 
 Route::inertia('/', 'welcome', [
     'canRegister' => Features::enabled(Features::registration()),
@@ -58,6 +61,24 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::patch('farms/{farm}', [FarmController::class, 'update'])
         ->name('farms.update');
+
+
+ Route::get('regions', [RegionController::class, 'index'])
+        ->name('regions.index');
+
+    Route::get('regions/create', [RegionController::class, 'create'])
+        ->name('regions.create');
+
+    Route::post('regions', [RegionController::class, 'store'])
+        ->name('regions.store');
+
+    Route::get('regions/{region}/edit', [RegionController::class, 'edit'])
+        ->name('regions.edit');
+
+    Route::patch('regions/{region}', [RegionController::class, 'update'])
+        ->name('regions.update');
+
+
 
     Route::get('fields', [FieldController::class, 'index'])
         ->name('fields.index');

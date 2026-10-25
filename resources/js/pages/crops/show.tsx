@@ -9,7 +9,6 @@ type CropShowPageProps = {
     crop: {
         id: number;
         name: string;
-        category: string;
         status: string;
         notes: string | null;
         created_at: string | null;
@@ -45,7 +44,6 @@ export default function CropsShowPage() {
                         <div className="space-y-1">
                             <div className="flex flex-wrap items-center gap-2">
                                 <CardTitle>{crop.name}</CardTitle>
-                                <Badge variant="outline">{crop.category}</Badge>
                                 <Badge variant="outline">{crop.status}</Badge>
                             </div>
                             <CardDescription>Detailansicht einer Kultur.</CardDescription>
